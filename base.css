@@ -70,4 +70,10 @@ header, footer {
   padding: 1rem;
   text-align: center;
 }
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #FFCC00; /* golden yellow */
+}
+
 
