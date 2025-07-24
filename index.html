@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>John Doe - Personal Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        nav {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 0;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background-color: #667eea;
+            color: white;
+        }
+        
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        section:nth-child(even) {
+            background-color: white;
+        }
+        
+        h2 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+        
+        .project {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+        
+        .project h3 {
+            color: #667eea;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project a {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .project a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .skill-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-links a {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-links a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            section {
+                padding: 2rem 1rem;
+            }
+            
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Alex Mwaki</h1>
+        <p>Passionate Front End Developer | Creative Problem Solver | Lifelong Learner</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>Hello! I'm Alex Mwaki, a dedicated front end developer with a passion for creating innovative web solutions. With over 5 years of experience in software development, I specialize in building responsive, user-friendly applications that solve real-world problems. I believe in writing clean, maintainable code and staying up-to-date with the latest technologies and best practices in the industry.</p>
+        <p>My journey in technology began with a curiosity about how things work on the web, which has evolved into a professional career focused on delivering high-quality digital experiences. I enjoy collaborating with teams, mentoring junior developers, and contributing to open-source projects that make a positive impact.</p>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        
+        <article class="project">
+            <h3>E-Commerce Platform</h3>
+            <p>A full-stack e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart functionality, payment integration with Stripe, and an admin dashboard for inventory management. The platform is fully responsive and optimized for performance.</p>
+            <a href="https://github.com/alexmwaki/ecommerce-platform" target="_blank">View Project</a>
+        </article>
+        
+        <article class="project">
+            <h3>Task Management App</h3>
+            <p>A collaborative task management application developed using Vue.js and Firebase. Users can create, assign, and track tasks in real-time. The app includes features like drag-and-drop functionality, deadline reminders, team collaboration tools, and progress analytics.</p>
+            <a href="https://github.com/alexmwaki/task-manager" target="_blank">View Project</a>
+        </article>
+        
+        <article class="project">
+            <h3>Weather Dashboard</h3>
+            <p>A weather application that provides current conditions and forecasts using OpenWeatherMap API. Built with vanilla JavaScript, HTML5, and CSS3. Features include location-based weather data, 7-day forecasts, weather alerts, and a clean, intuitive interface.</p>
+            <a href="https://github.com/alexmwaki/weather-dashboard" target="_blank">View Project</a>
+        </article>
+        
+        <article class="project">
+            <h3>Portfolio Website</h3>
+            <p>A responsive personal portfolio website showcasing my skills and projects. Built with semantic HTML5, modern CSS3, and vanilla JavaScript. Features smooth scrolling navigation, animated elements, and a clean, professional design that adapts to all screen sizes.</p>
+            <a href="https://github.com/alexmwaki/portfolio" target="_blank">View Project</a>
+        </article>
+    </section>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a software developer based in Nairobi City with a strong foundation in both front-end and back-end development. My technical journey started with HTML and CSS, and has expanded to include modern JavaScript frameworks, server-side technologies, and cloud platforms.</p>
+        
+        <p>When I'm not coding, you can find me contributing to open-source projects, attending tech meetups, or exploring new technologies. I'm passionate about clean code, user experience design, and creating solutions that make a difference in people's lives.</p>
+        
+        <h3>Technical Skills</h3>
+        <div class="skills-list">
+            <div class="skill-item">
+                <strong>Frontend</strong><br>
+                HTML5, CSS3, JavaScript, React, Vue.js, TypeScript
+            </div>
+            <div class="skill-item">
+                <strong>Backend</strong><br>
+                Node.js, Python, Express.js, Django, REST APIs
+            </div>
+            <div class="skill-item">
+                <strong>Database</strong><br>
+                MongoDB, PostgreSQL, MySQL, Redis
+            </div>
+            <div class="skill-item">
+                <strong>Tools & DevOps</strong><br>
+                Git, Docker, AWS, CI/CD, Jest, Webpack
+            </div>
+        </div>
+        
+        <h3>Hobbies & Interests</h3>
+        <p>Beyond programming, I enjoy hiking, photography, and playing guitar. I believe that diverse interests help maintain creativity and provide fresh perspectives when approaching technical challenges. I'm also an avid reader of tech blogs and enjoy staying connected with the developer community through various online platforms.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>I'm always interested in new opportunities and exciting projects. Whether you have a question about my work, want to collaborate on a project, or just want to say hello, feel free to reach out!</p>
+        
+        <div class="contact-links">
+            <a href="mailto:alex.o.mwaki@gmail.com">Email Me</a>
+            <a href="https://linkedin.com/in/alexmwaki" target="_blank">LinkedIn</a>
+            <a href="https://github.com/marrienga" target="_blank">GitHub</a>
+        </div>
+        
+        <p style="text-align: center; margin-top: 2rem; opacity: 0.8;">
+            I typically respond to messages within 24 hours. Looking forward to connecting with you!
+        </p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Alex Mwaki. All rights reserved.</p>
+    </footer>
+</body>
+</html>
