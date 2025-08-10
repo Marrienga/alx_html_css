@@ -1,0 +1,48 @@
+/* WHAT WE DO SECTION */
+.what-we-do {
+    padding: 60px 20px;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.what-we-do h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Icon Styling */
+.service-item span {
+    display: inline-block;
+    font-size: 50px;
+    color: #e63946;
+    margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .what-we-do h2 {
+        font-size: 1.5rem;
+    }
+
+    .service-item p {
+        font-size: 0.9rem;
+    }
+}
