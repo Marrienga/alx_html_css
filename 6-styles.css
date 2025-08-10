@@ -1,0 +1,82 @@
+/* Our results pentagons */
+.results-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  align-items: start;
+  margin-top: 18px;
+}
+
+/* keep result-item generic & reusable */
+.result-item {
+  background: transparent; /* card bg handled elsewhere if needed */
+  padding: 18px 12px 6px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.result-item:hover { transform: translateY(-6px); }
+
+/* pentagon container */
+.pentagon {
+  --size: clamp(72px, 12vw, 120px); /* responsive size */
+  width: var(--size);
+  height: var(--size);
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, #ff6b6b 0%, #e63946 100%);
+  clip-path: polygon(
+    50% 0%,   /* top */
+    95% 35%,  /* top-right */
+    79% 95%,  /* bottom-right */
+    21% 95%,  /* bottom-left */
+    5% 35%    /* top-left */
+  );
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12), inset 0 -6px 18px rgba(0,0,0,0.06);
+  transition: transform .28s cubic-bezier(.2,.9,.3,1), box-shadow .28s;
+  position: relative;
+}
+
+/* optional subtle shine using a pseudo-element */
+.pentagon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  clip-path: inherit;
+  background: linear-gradient(180deg, rgba(255,255,255,0.12), transparent 40%);
+  pointer-events: none;
+  border-radius: 4px;
+}
+
+/* number inside pentagon */
+.result-number {
+  font-weight: 800;
+  font-size: clamp(1rem, 2.4vw, 1.6rem);
+  color: #fff;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.18);
+  line-height: 1;
+}
+
+/* description text below */
+.result-item p {
+  margin: 0;
+  color: #333;
+  font-weight: 600;
+  font-size: .95rem;
+}
+
+/* hover effect for pentagon */
+.result-item:hover .pentagon {
+  transform: translateY(-8%) scale(1.04) rotate(-2deg);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.16);
+}
+
+/* small screens tweaks */
+@media (max-width: 480px) {
+  .results-grid { gap: 16px; }
+  .result-item { padding: 14px 8px 6px; }
+}
