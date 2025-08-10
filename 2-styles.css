@@ -1,0 +1,49 @@
+/* OUR RESULTS SECTION */
+.our-results {
+    padding: 60px 20px;
+    background: white;
+    text-align: center;
+}
+
+.our-results h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.results-intro {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+}
+
+/* Reusing service-item styling */
+.result-item {
+    background: #f8f8f8;
+    padding: 30px;
+}
+
+.result-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #e63946;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .our-results h2 {
+        font-size: 1.5rem;
+    }
+
+    .result-number {
+        font-size: 2rem;
+    }
+}
